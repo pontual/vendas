@@ -1,0 +1,2 @@
+[  ] test user is logged in
+[  ] fake or force login

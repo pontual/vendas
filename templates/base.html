@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %} - Vendas</title>
+	<link rel="stylesheet" href="{% static 'css/materialize-1.0.0.css' %}">
+	<link href="{% static 'css/fonts.css' %}" rel="stylesheet">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+  </head>
+
+  <body>
+	<!-- user account dropdown -->
+    {% if user.is_authenticated %}
+	<ul id="account_dropdown" class="dropdown-content">
+	  <li><a href="{% url 'change_password' %}">Change password</a></li>
+	  <li><a href="{% url 'logout' %}">Log out</a></li>
+	</ul>
+	{% endif %}
+	
+	<nav>
+      <div class="nav-wrapper indigo darken-4">
+		<a href="{% url 'index' %}" class="brand-logo right">Vendas</a>
+		<ul id="nav-mobile" class="left">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'admin:index' %}">Admin</a></li>
+
+		  {% if user.is_authenticated %}	  
+		  <li><a class="dropdown-trigger" href="#!" data-target="account_dropdown">My account<i class="material-icons right">arrow_drop_down</i></a></li>
+		  {% endif %}
+		</ul>
+      </div>
+	</nav>
+
+	<div class="container">
+      {% block heading %}{% endblock %}
+
+	  {% block content %}{% endblock %}
+	</div>
+	
+    <script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'js/materialize-1.0.0.js' %}"></script>
+	{% if user.is_authenticated %}
+	<script>
+	  $(".dropdown-trigger").dropdown();
+	</script>
+	{% endif %}
+	
+	{% block page_script %}{% endblock %}
+
+	{% block footer %}{% endblock %}
+	<br>
+	<br>
+	<br>	
+  </body>
+</html>

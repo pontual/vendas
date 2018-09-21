@@ -1,0 +1,16 @@
+*~
+\#*\#
+.\#~
+
+*.py[cod]
+*$py.class
+
+geckodriver*
+
+db.sqlite3
+
+secrets.py
+
+runserver
+makemigrations
+migrate

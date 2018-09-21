@@ -1,2 +1,3 @@
+[  ] login FT: how to create user?
 [  ] test user is logged in
 [  ] fake or force login

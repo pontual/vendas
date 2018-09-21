@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block heading %}<h3>Sign up</h3>{% endblock %}
+
+{% block content %}
+
+Please choose a username and password:
+
+<form method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    
+    <p>
+	  <button class="btn waves-effect waves-light" type="submit" id="submit_button">Submit</button>
+    </p>
+</form>
+
+{% endblock %}
+

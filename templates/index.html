@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block heading %}<h3>Vendas</h3>{% endblock %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+Welcome back, {{ user }}
+
+<p>
+  <a href="{% url 'logout' %}" class="waves-effect waves-light btn indigo darken-2" id="link_logout">Log Out</a>
+</p>
+
+{% else %}
+
+<p>
+  <a href="{% url 'login' %}" class="waves-effect waves-light btn indigo darken-2" id="link_login">Log In</a>
+</p>
+
+<p>
+  <a href="{% url 'signup' %}" class="waves-effect waves-light btn deep-purple darken-3" id="link_signup">Sign Up</a>
+</p>
+
+
+{% endif %}
+
+{% endblock %}

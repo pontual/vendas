@@ -1,14 +1,10 @@
-[  ] login FT: how to create user?
+[  ] Custom Company form for active checkbox and selects
 
-LoggedInFunctionalTest? create user in setUp, force login
-
-[  ] test user is logged in
-[  ] fake or force login
-
-p. 272 POST requests are processed in the same view the form is rendered
-
-p. 275 def view_list(request, list_id): redirects to /lists/{mylist.id}
-
-p. 280 a model's get_absolute_url
+[ok] login FT: how to create user?
+[ok] test user is logged in
+[NO] fake or force login -- simulating login of dummy user
+[ok] p. 280 a model's get_absolute_url
 
 p. 300 view list with form
+
+p. 272 POST requests are processed in the same view the form is rendered

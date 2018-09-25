@@ -36,6 +36,13 @@ class CompanyTest(FunctionalTest):
         self.browser.get(self.live_server_url + reverse('companies:new'))
         self.wait_for_text_in_body('New Company')
 
-        
+        business_name_field = self.browser.find_element_by_name('business_name')
+        business_name_field.send_keys("A new company")
+
+        submit_button = self.browser.find_element_by_id('submit_button')
+        submit_button.click()
+
+        self.wait_for_text_in_body("Company Details")
+        self.wait_for_text_in_body("A new company")
 
         

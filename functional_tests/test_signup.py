@@ -1,3 +1,4 @@
+import time
 from django.urls import reverse
 
 from .base import FunctionalTest
@@ -13,7 +14,7 @@ class SignupTest(FunctionalTest):
         signup_link = self.browser.find_element_by_id("link_signup")
         signup_link.click()
 
-        self.wait_for(lambda: self.assertIn("Sign up", self.browser.title))
+        self.wait_for_text_in_title("Sign up")
 
 
     def test_signup_as_selenium(self):
@@ -31,5 +32,4 @@ class SignupTest(FunctionalTest):
         submit_button = self.browser.find_element_by_id("submit_button")
         submit_button.click()
         
-        self.wait_for(lambda: self.assertIn("Welcome back, selenium",
-                                            self.browser.find_element_by_tag_name("body").text))
+        self.wait_for_text_in_body("Welcome back, selenium")

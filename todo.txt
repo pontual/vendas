@@ -1,9 +1,7 @@
-[  ] delete company confirmation
-[  ] Custom Company form with better layout for active checkbox and selects
+[  ] delete company, confirmation page
+[  ] Custom Company form with better layout (collapsible for shipping, for example), active checkbox and selects
 
 [ok] login FT: how to create user?
 [ok] test user is logged in
-[NO] fake or force login -- simulating login of dummy user
+[ok] fake or force login -- simulating login of dummy user
 [ok] p. 280 a model's get_absolute_url
-
-[  ] p. 272 POST requests are processed in the same view the form is rendered

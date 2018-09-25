@@ -57,4 +57,8 @@ class Company(models.Model):
 
 
     def __str__(self):
-        return "[{}] {} ({})".format(self.code, self.business_name, self.salesperson)
+        if self.code:
+            start = self.code + " "
+        else:
+            start = ""
+        return "{}{} ({})".format(start, self.business_name, self.salesperson)

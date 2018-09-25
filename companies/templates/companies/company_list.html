@@ -6,7 +6,7 @@
 
 <ul>
   {% for company in object_list %}
-  <li>{{ company.business_name }}</li>
+  <li><a href="{% url 'companies:detail' company.pk %}">{{ company.business_name }}</a></li>
   {% endfor %}
 </ul>
 

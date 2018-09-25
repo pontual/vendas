@@ -16,3 +16,8 @@ class CompanyDetail(LoginRequiredMixin, DetailView):
 class CompanyCreate(LoginRequiredMixin, CreateView):
     model = Company
     fields = '__all__'
+
+
+class CompanyUpdate(LoginRequiredMixin, UpdateView):
+    model = Company
+    fields = '__all__'

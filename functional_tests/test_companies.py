@@ -28,13 +28,13 @@ class CompanyTest(FunctionalTest):
     def test_get_new_company_form(self):
         self.login()
         self.browser.get(self.live_server_url + reverse('companies:new'))
-        self.wait_for_text_in_body('New Company')
+        self.wait_for_text_in_body('Add/Edit Company')
 
 
     def test_new_company_from_form_appears_in_list(self):
         self.login()
         self.browser.get(self.live_server_url + reverse('companies:new'))
-        self.wait_for_text_in_body('New Company')
+        self.wait_for_text_in_body('Add/Edit Company')
 
         business_name_field = self.browser.find_element_by_name('business_name')
         business_name_field.send_keys("A new company")

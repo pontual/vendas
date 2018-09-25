@@ -9,5 +9,12 @@
 
 {{ company.business_name }}
 
-  
+<p>
+  <a href="{% url 'companies:edit' company.pk %}">Edit</a>
+</p>
+
+<p>
+  Delete
+</p>	
+
 {% endblock %}

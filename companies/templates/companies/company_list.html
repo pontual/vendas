@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Company List</h3>
+
+<ul>
+  {% for company in object_list %}
+  <li>{{ company.business_name }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

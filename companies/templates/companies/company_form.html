@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block heading %}<h3></h3>{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <p>
+	<button class="btn waves-effect waves-light" type="submit" id="submit_button">Submit</button>
+  </p>
+</form>
+
+{% endblock %}

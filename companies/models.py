@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -46,7 +47,11 @@ class Company(models.Model):
 
     notes = models.TextField(blank=True)
 
-    
+
+    def get_absolute_url(self):
+        return reverse('companies:detail', kwargs={'pk': self.pk})
+
+        
     class Meta:
         verbose_name_plural = "Companies"
 

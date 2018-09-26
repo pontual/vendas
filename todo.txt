@@ -1,5 +1,7 @@
 [  ] delete company, confirmation page
 [  ] Custom Company form with better layout (collapsible for shipping, for example), active checkbox and selects
+[  ] Paginate company list
+[  ] search company
 
 [ok] login FT: how to create user?
 [ok] test user is logged in

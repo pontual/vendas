@@ -1,9 +1,23 @@
-[  ] delete company, confirmation page
-[  ] Custom Company form with better layout (collapsible for shipping, for example), active checkbox and selects
-[  ] Paginate company list
+=== COMPANIES ===
+[  ] Custom Company form with better layout (collapsible for shipping, for example), active checkbox and selects, bigger Notes box
+[  ] add all fields in company DetailView
 [  ] search company
 
+/// COMPLETED (COMPANIES) ///
+[ok] Change Add/Edit company to context variable for appropriate action
+[ok] delete company, confirmation page
+[ok] Paginate company list
+
+
+=== TESTS ===
+
+/// COMPLETED (TESTS) ///
 [ok] login FT: how to create user?
 [ok] test user is logged in
 [ok] fake or force login -- simulating login of dummy user
 [ok] p. 280 a model's get_absolute_url
+
+
+=== GENERAL ===
+
+[  ] remove MEDIA from vendas/urls.py (serve with web server)

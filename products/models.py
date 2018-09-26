@@ -10,6 +10,8 @@ class Product(models.Model):
     name = models.CharField(max_length=120, blank=True)
     active = models.BooleanField(default=True)
 
+    photo = models.ImageField(upload_to='product_photos/', blank=True, null=True)
+    
     ean = models.CharField(max_length=32, blank=True)
     quantity_per_box = models.IntegerField(default=0)
     

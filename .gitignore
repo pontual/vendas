@@ -14,3 +14,5 @@ secrets.py
 runserver
 makemigrations
 migrate
+
+/media/

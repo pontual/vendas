@@ -8,11 +8,12 @@
 
 <ul>
   {% for product in object_list %}
-  <li><a href="{% url 'products:detail' product.pk %}">{{ product.name }}</a></li>
-
   {% if product.photo %}
-  <li><img src="{{ product.photo.url }}"></li>
+  <li><img src="{{ product.photo.url }}" width="240"></li>
   {% endif %}
+
+  <li>{{ product.code }} <a href="{% url 'products:detail' product.pk %}">{{ product.name }}</a></li>
+
   
   {% endfor %}
 </ul>

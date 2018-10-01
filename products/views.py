@@ -8,7 +8,7 @@ from .models import Product
 
 class ProductList(LoginRequiredMixin, ListView):
     model = Product
-    paginate_by = 50
+    paginate_by = 24
     
 
 class ProductDetail(LoginRequiredMixin, DetailView):

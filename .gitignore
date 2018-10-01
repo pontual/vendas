@@ -17,6 +17,8 @@ migrate
 
 /media/
 
+/sisfotos/
+
 *.csv
 *.CSV
 

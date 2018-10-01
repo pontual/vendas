@@ -39,4 +39,4 @@ class ProductUpdate(LoginRequiredMixin, UpdateView):
         
 class ProductDelete(LoginRequiredMixin, DeleteView):
     model = Product
-    success_url = reverse_lazy('companies:list')
+    success_url = reverse_lazy('products:list')

@@ -9,6 +9,13 @@
 [ok] Paginate company list
 
 
+=== PRODUCTS ===
+[  ] make the photo "clear" button work
+[  ] search product
+
+/// COMPLETED (PRODUCTS) ///
+
+
 === TESTS ===
 
 /// COMPLETED (TESTS) ///

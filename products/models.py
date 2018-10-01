@@ -1,6 +1,7 @@
 from decimal import Decimal
 
 from django.db import models
+from django.urls import reverse
 
 from transactions.models import Currency
 
@@ -26,6 +27,10 @@ class Product(models.Model):
     default_sale_currency = models.ForeignKey(Currency, blank=True, null=True, on_delete=models.SET_NULL)
     default_sale_price = models.DecimalField(max_digits=12, decimal_places=4, default=Decimal('0.0'))
 
+
+    def get_absolute_url(self):
+        return reverse('products:detail', kwargs={'pk': self.pk})
+        
 
     class Meta:
         ordering = ['code']

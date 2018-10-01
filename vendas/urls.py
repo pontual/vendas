@@ -31,6 +31,6 @@ urlpatterns = [
     path('change-password', employees.views.change_password, name='change_password'),
 
     path('companies/', include('companies.urls')),
-    # path('products/', include('products.urls')),
+    path('products/', include('products.urls')),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

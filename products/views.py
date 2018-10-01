@@ -21,7 +21,7 @@ class ProductCreate(LoginRequiredMixin, CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['my_action'] = "Add"
+        context['my_action'] = "New"
 
         return context
 

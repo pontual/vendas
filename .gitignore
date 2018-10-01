@@ -16,3 +16,16 @@ makemigrations
 migrate
 
 /media/
+
+*.csv
+*.CSV
+
+*.xls
+*.XLS
+
+*.ods
+*.ODS
+
+*.jpg
+*.Jpg
+*.JPG

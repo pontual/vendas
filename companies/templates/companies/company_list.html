@@ -6,10 +6,13 @@
 
 {% include 'pagination.html' %}
 
-<ul>
+<table>
   {% for company in object_list %}
-  <li><a href="{% url 'companies:detail' company.pk %}">{{ company.business_name }}</a></li>
+  <tr>
+	<td>{{ company.code }}</td>
+	<td><a href="{% url 'companies:detail' company.pk %}">{{ company.business_name }}</a></td>
+  </tr>
   {% endfor %}
-</ul>
+</table>
 
 {% endblock %}

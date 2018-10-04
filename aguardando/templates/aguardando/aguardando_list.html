@@ -49,6 +49,7 @@
 
 	  <tr{% if aguardando.estado.nome == "Desistência" %} class="orange lighten-3"{% endif %}>
 		<td>
+		  <a href="/admin/aguardando/aguardando/{{ aguardando.id }}/change/" target="_blank">Edit</a>
 		  <b>{{ aguardando.produto.code }}</b>
 		  {{ aguardando.produto.name|title }}
 		</td>

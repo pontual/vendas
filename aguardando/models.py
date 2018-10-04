@@ -16,7 +16,7 @@ class Estado(models.Model):
 
         
     def __str__(self):
-        return "{}: {}".format(self.ordem, self.nome)
+        return "{}".format(self.nome.upper())
 
 
 class Aguardando(models.Model):
@@ -27,11 +27,11 @@ class Aguardando(models.Model):
     cliente = models.ForeignKey(Company, on_delete=models.CASCADE)
     estado = models.ForeignKey(Estado, on_delete=models.SET_NULL, null=True)
     obs = models.CharField(max_length=200, blank=True)
-    data = models.DateField(auto_now_add=True)
+    data_hora = models.DateTimeField(auto_now_add=True)
 
 
     class Meta:
-        ordering = ['estado', 'data', 'cliente']
+        ordering = ['estado', 'data_hora']
 
         
     def __str__(self):
@@ -41,7 +41,7 @@ class Aguardando(models.Model):
             self.ja_separado,
             ' '.join(self.cliente.business_name.split()[:3]).title(),
             self.estado,
-            self.data)
+            self.data_hora)
 
 
 class Chegando(models.Model):

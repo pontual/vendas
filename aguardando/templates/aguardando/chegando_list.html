@@ -4,7 +4,7 @@
 
 <h3>Chegando List</h3>
 
-<h6><a href="/admin/aguardando/chegando/">Admin</a></h6>
+<h6><a href="/admin/aguardando/chegando/" target="_blank">Admin</a></h6>
 	
 {% include 'pagination.html' %}
 
@@ -16,11 +16,11 @@
 		  Produto
 		</th>
 
-		<th>
+		<th class="align-right">
 		  Chegando
 		</th>
 
-		<th>
+		<th class="align-right">
 		  Sobram
 		</th>
 
@@ -37,11 +37,11 @@
 		  {{ chegando.produto.name|title }}
 		</td>
 		
-		<td>
+		<td class="align-right">
 		  {{ chegando.qtde }}
 		</td>
 
-		<td>
+		<td class="align-right">
 		  ({{ chegando.sobram }})
 		</td>
 

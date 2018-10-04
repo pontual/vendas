@@ -4,7 +4,7 @@
 
 <h3>Aguardando List</h3>
 
-<h6><a href="/admin/aguardando/aguardando/">Admin</a></h6>
+<h6><a href="/admin/aguardando/aguardando/" target="_blank">Admin</a></h6>
 
 {% include 'pagination.html' %}
 
@@ -16,12 +16,16 @@
 		  Produto
 		</th>
 		
-		<th>
+		<th class="align-right">
 		  Qtde
 		</th>
 		
-		<th>
-		  Já sep.
+		<th class="align-right">
+		  Já_sep.
+		</th>
+		
+		<th class="align-right">
+		  Sobram
 		</th>
 		
 		<th>
@@ -31,6 +35,10 @@
 		<th>
 		  Estado
 		</th>
+
+		<th>
+		  Container
+		</th>
 		
 		<th>
 		  Obs.
@@ -39,18 +47,24 @@
 	  
 	  {% for aguardando in object_list %}
 
-	  <tr>
+	  <tr{% if aguardando.estado.nome == "Desistência" %} class="orange lighten-3"{% endif %}>
 		<td>
 		  <b>{{ aguardando.produto.code }}</b>
 		  {{ aguardando.produto.name|title }}
 		</td>
 		
-		<td>
+		<td class="align-right">
 		  {{ aguardando.qtde }}
 		</td>
 
-	  	<td>
+	  	<td class="align-right">
 		  {{ aguardando.ja_separado }}
+		</td>
+
+	  	<td class="align-right">
+		  {% if aguardando.estado.nome == "Container" %}
+		  ({{ aguardando.sobram }})
+		  {% endif %}
 		</td>
 
 	  	<td>
@@ -60,6 +74,10 @@
 
 	  	<td>
 		  {{ aguardando.estado|title }}
+		</td>
+
+	  	<td>
+		  {{ aguardando.container }}
 		</td>
 
 	  	<td>

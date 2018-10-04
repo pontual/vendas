@@ -26,6 +26,8 @@
 
 Model CRUD: YAGNI, use admin
 
+Manually define aguardando's container instead of auto-computing
+
 To-do:
 
 /aguardando/aguardando/CODIGO (if needed)

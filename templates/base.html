@@ -30,6 +30,11 @@
 	  <li><a href="{% url 'products:new' %}">New</a></li>
 	</ul>
 
+	<ul id="aguardando_dropdown" class="dropdown-content">
+	  <li><a href="{% url 'aguardando:chegando_list' %}">Chegando</a></li>
+	  <li><a href="{% url 'aguardando:aguardando_list' %}">Aguardando</a></li>
+	</ul>
+	  
 	<nav>
       <div class="nav-wrapper indigo darken-4">
 		<a href="{% url 'index' %}" class="brand-logo right">Vendas</a>
@@ -40,6 +45,8 @@
           <li><a class="dropdown-trigger" href="#!" data-target="company_dropdown">Companies<i class="material-icons right">arrow_drop_down</i></a></li>
 
           <li><a class="dropdown-trigger" href="#!" data-target="product_dropdown">Products<i class="material-icons right">arrow_drop_down</i></a></li>
+
+          <li><a class="dropdown-trigger" href="#!" data-target="aguardando_dropdown">Aguardando<i class="material-icons right">arrow_drop_down</i></a></li>
 
 		  {% if user.is_authenticated %}	  
 		  <li><a class="dropdown-trigger" href="#!" data-target="account_dropdown">My account<i class="material-icons right">arrow_drop_down</i></a></li>

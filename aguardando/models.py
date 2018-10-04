@@ -31,7 +31,7 @@ class Aguardando(models.Model):
 
 
     class Meta:
-        ordering = ['estado', 'data_hora']
+        ordering = ['produto', 'estado', 'data_hora']
 
         
     def __str__(self):
@@ -52,8 +52,17 @@ class Chegando(models.Model):
 
 
     class Meta:
-        ordering = ['container', 'produto']
+        ordering = ['produto', 'container']
 
         
     def __str__(self):
         return "{} {} {}".format(self.produto.code, self.qtde, self.container)
+
+
+    def sobram(self):
+        all_chegandos = Chegando.objects.filter(produto=self.produto)
+        total_chegando = sum(a.qtde for a in all_chegandos)
+        
+        aguardandos = Aguardando.objects.filter(produto=self.produto)
+        total_aguardando = sum(a.qtde - a.ja_separado for a in aguardandos)
+        return total_chegando - total_aguardando

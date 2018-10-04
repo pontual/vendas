@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Aguardando List</h3>
+
+<h6><a href="/admin/aguardando/aguardando/">Admin</a></h6>
+
+{% include 'pagination.html' %}
+
+<div class="row">
+  <div class="col s12">
+	<table>
+	  <tr>
+		<th>
+		  Produto
+		</th>
+		
+		<th>
+		  Qtde
+		</th>
+		
+		<th>
+		  Já sep.
+		</th>
+		
+		<th>
+		  Cliente
+		</th>
+		
+		<th>
+		  Estado
+		</th>
+		
+		<th>
+		  Obs.
+		</th>
+	  </tr>
+	  
+	  {% for aguardando in object_list %}
+
+	  <tr>
+		<td>
+		  <b>{{ aguardando.produto.code }}</b>
+		  {{ aguardando.produto.name|title }}
+		</td>
+		
+		<td>
+		  {{ aguardando.qtde }}
+		</td>
+
+	  	<td>
+		  {{ aguardando.ja_separado }}
+		</td>
+
+	  	<td>
+		  {{ aguardando.cliente.code }}
+		  {{ aguardando.cliente.business_name|title }}
+		</td>
+
+	  	<td>
+		  {{ aguardando.estado|title }}
+		</td>
+
+	  	<td>
+		  {{ aguardando.obs }}
+		</td>
+	  </tr>
+	  
+	  {% endfor %}
+	</table>
+  </div>
+</div>
+
+{% include 'pagination.html' %}
+
+{% endblock %}

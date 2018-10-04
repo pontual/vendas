@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Chegando List</h3>
+
+<h6><a href="/admin/aguardando/chegando/">Admin</a></h6>
+	
+{% include 'pagination.html' %}
+
+<div class="row">
+  <div class="col s9">
+	<table>
+	  <tr>
+		<th>
+		  Produto
+		</th>
+
+		<th>
+		  Chegando
+		</th>
+
+		<th>
+		  Sobram
+		</th>
+
+		<th>
+		  Container
+		</th>
+	  </tr>
+	  
+	  {% for chegando in object_list %}
+
+	  <tr>
+		<td>
+		  <b>{{ chegando.produto.code }}</b>
+		  {{ chegando.produto.name|title }}
+		</td>
+		
+		<td>
+		  {{ chegando.qtde }}
+		</td>
+
+		<td>
+		  ({{ chegando.sobram }})
+		</td>
+
+		<td>
+		  {{ chegando.container }}
+		</td>
+	  </tr>
+	  
+	  {% endfor %}
+	</table>
+  </div>
+</div>
+
+{% include 'pagination.html' %}
+
+{% endblock %}

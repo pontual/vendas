@@ -23,3 +23,9 @@
   - qtde
   - container
 
+
+Model CRUD: YAGNI, use admin
+
+To-do:
+
+/aguardando/aguardando/CODIGO (if needed)

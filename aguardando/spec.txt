@@ -1,0 +1,25 @@
+* estado
+  - ordem (int)
+  - nome
+    - 1 desistencia
+	- 2 reserva
+	- 3 container
+	- 4 desistencia do container
+	- 5 faturado
+	- 6 cancelado
+	- 7 controle
+	- 8 verificacao
+	
+* aguardando
+  - produto.codigo
+  - qtde
+  - ja_separado
+  - cliente.codigo
+  - estado (FK)
+  - obs
+
+* chegando
+  - produto.codigo
+  - qtde
+  - container
+

@@ -13,6 +13,10 @@
 	<table>
 	  <tr>
 		<th>
+		  Edit
+		</th>
+			
+		<th>
 		  Produto
 		</th>
 		
@@ -49,7 +53,10 @@
 
 	  <tr{% if aguardando.estado.nome == "Desistência" %} class="orange lighten-3"{% endif %}>
 		<td>
-		  <a href="/admin/aguardando/aguardando/{{ aguardando.id }}/change/" target="_blank">Edit</a>
+		  <a href="/admin/aguardando/aguardando/{{ aguardando.id }}/change/" target="_blank" class="btn purple darken-4"><i class="large material-icons">edit</i></a>
+		</td>
+
+		<td>
 		  <b>{{ aguardando.produto.code }}</b>
 		  {{ aguardando.produto.name|title }}
 		</td>

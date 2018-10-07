@@ -47,28 +47,185 @@
         <ul class="collapsible">
             <li>
                 <div class="collapsible-header">Tax IDs</div>
-                <div class="collapsible-body">body</div>
+                <div class="collapsible-body">
+                    <div class="row">
+                        <div class="input-field col s4">
+                            {{ form.federal_id }}
+                            <label for="id_federal_id">Federal ID</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            {{ form.state_id }}
+                            <label for="id_state_id">State ID</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            {{ form.city_id }}
+                            <label for="id_city_id">City ID</label>
+                        </div>
+
+                    </div>
+                </div>
             </li>
 
             <li>
                 <div class="collapsible-header">Main Address</div>
                 <div class="collapsible-body">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form.address_1 }}
+                            <label for="id_address_1">Address 1</label>
+                        </div>                        
+                    </div>
 
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form.address_2 }}
+                            <label for="id_address_2">Address 2</label>
+                        </div>                        
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form.address_3 }}
+                            <label for="id_address_3">Address 3</label>
+                        </div>                        
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form.city }}
+                            <label for="id_city">City</label>
+                        </div>
+
+                        <div class="input-field col s3">
+                            {{ form.state }}
+                            <label for="id_state">State</label>
+                        </div>
+
+                        <div class="input-field col s3">
+                            {{ form.zip_code }}
+                            <label for="id_zip_code">Zip Code</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form.country }}
+                            <label for="id_country">Country</label>
+                        </div>
+                    </div>
                 </div>
             </li>
 
             <li>
                 <div class="collapsible-header">Shipping Address</div>
-                <div class="collapsible-body">body</div>
+                <div class="collapsible-body">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form.shipper }}
+                            <label>Shipping Company</label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form.shipping_address_1 }}
+                            <label for="id_shipping_address_1">Shipping Address 1</label>
+                        </div>                        
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form.shipping_address_2 }}
+                            <label for="id_shipping_address_2">Shipping Address 2</label>
+                        </div>                        
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form.shipping_address_3 }}
+                            <label for="id_shipping_address_3">Shipping Address 3</label>
+                        </div>                        
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form.shipping_city }}
+                            <label for="id_shipping_city">Shipping City</label>
+                        </div>
+
+                        <div class="input-field col s3">
+                            {{ form.shipping_state }}
+                            <label for="id_shipping_state">Shipping State</label>
+                        </div>
+
+                        <div class="input-field col s3">
+                            {{ form.shipping_zip_code }}
+                            <label for="id_shipping_zip_code">Shipping Zip Code</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form.shipping_country }}
+                            <label for="id_shipping_country">Shipping Country</label>
+                        </div>
+                    </div>
+
+                </div>
             </li>
 
             <li>
                 <div class="collapsible-header">Buyer Contact</div>
-                <div class="collapsible-body">body</div>
+                <div class="collapsible-body">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form.contact }}
+                            <label for="id_contact">Contact Name</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s4">
+                            {{ form.phone_main }}
+                            <label for="id_phone_main">Main Phone</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            {{ form.phone_2 }}
+                            <label for="id_phone_2">Phone 2</label>
+                        </div>
+
+                        <div class="input-field col s4">
+                            {{ form.phone_3 }}
+                            <label for="id_phone_3">Phone 3</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form.email_main }}
+                            <label for="id_email_main">Main Email</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            {{ form.email_finance }}
+                            <label for="id_email_finance">Finance Email</label>
+                        </div>
+                    </div>
+                    
+                </div>
             </li>
 
         </ul>
-        
+
+        <div class="row">
+            <div class="input-field col s12">
+                {{ form.notes }}
+                <label for="id_notes">Notes</label>
+            </div>
+        </div>
 
         <p>
 	        <button class="btn waves-effect waves-light" type="submit" id="submit_button">Submit</button>

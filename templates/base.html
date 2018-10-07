@@ -40,6 +40,9 @@
 		<a href="{% url 'index' %}" class="brand-logo right">Vendas</a>
 		<ul id="nav-mobile" class="left">
           <li><a href="{% url 'index' %}">Home</a></li>
+          
+          {% if user.is_authenticated %}	  
+
           <li><a href="{% url 'admin:index' %}">Admin</a></li>
 
           <li><a class="dropdown-trigger" href="#!" data-target="company_dropdown">Companies<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -48,7 +51,6 @@
 
           <li><a class="dropdown-trigger" href="#!" data-target="aguardando_dropdown">Aguardando<i class="material-icons right">arrow_drop_down</i></a></li>
 
-		  {% if user.is_authenticated %}	  
 		  <li><a class="dropdown-trigger" href="#!" data-target="account_dropdown">My account<i class="material-icons right">arrow_drop_down</i></a></li>
 		  {% endif %}
 		</ul>

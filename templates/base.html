@@ -39,8 +39,7 @@
       <div class="nav-wrapper indigo darken-4">
 		<a href="{% url 'index' %}" class="brand-logo right">Vendas</a>
 		<ul id="nav-mobile" class="left">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          
+
           {% if user.is_authenticated %}	  
 
           <li><a href="{% url 'admin:index' %}">Admin</a></li>

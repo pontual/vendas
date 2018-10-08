@@ -32,8 +32,9 @@
 	</div>
 
 	<div class="row">	  
-	  <div class="col s12">
-		<label for="id_photo">Photo:</label> <input type="file" name="photo" accept="image/*" id="id_photo">
+	  <div class="input-field col s12">
+		{{ form.photo }}
+		<label for="id_photo">Photo</label>
 	  </div>
 	</div>
 
@@ -91,7 +92,6 @@
 <script>
   $(document).ready(function () {
   $('select').formSelect();
-  $('.collapsible').collapsible();
   });
 </script>
 {% endblock %}

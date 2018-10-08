@@ -54,25 +54,48 @@
 	  </div>
 	</div>
 
-	{{ form.default_sale_currency }}
-	{{ form.default_sale_price }}
+	<div class="row">
+	  <div class="input-field col s4">
+		{{ form.default_sale_currency }}
+		<label>Default Sale Currency</label>
+	  </div>
+
+	  <div class="input-field col s4">
+		{{ form.default_sale_price }}
+		<label for="id_default_sale_price">Default Sale Price</label>
+	  </div>
+	</div>	
 	
 	<ul class="collapsible">
 	  <li>
 		<div class="collapsible-header">Tax Information</div>
 		<div class="collapsible-body">
 		  <div class="row">
-			
-  			<div class="input-field col s">
-			  {{ form. }}
-			  <label for="id_"></label>
+
+			<div class="input-field col s3">
+			  {{ form.ncm }}
+			  <label for="id_ncm">NCM</label>
 			</div>
 
-			{{ form.ncm }}
-			{{ form.ii }}
-			{{ form.cest }}
-			{{ form.icms }}
-			{{ form.ipi }}
+			<div class="input-field col s2">
+			  {{ form.ii }}
+			  <label for="id_ii">I. I.</label>
+			</div>
+
+			<div class="input-field col s3">
+			  {{ form.cest }}
+			  <label for="id_cest">CEST</label>
+			</div>
+
+			<div class="input-field col s2">
+			  {{ form.icms }}
+			  <label for="id_icms">ICMS</label>
+			</div>
+
+			<div class="input-field col s2">
+			  {{ form.ipi }}
+			  <label for="id_ipi">IPI</label>
+			</div>
 
 		  </div>
 		</div>

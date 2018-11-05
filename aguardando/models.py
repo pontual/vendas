@@ -66,7 +66,7 @@ class Chegando(models.Model):
     sobram = sobram  # for use in template
 
     class Meta:
-        ordering = ['produto', 'container']
+        ordering = ['container', 'produto']
 
         
     def __str__(self):

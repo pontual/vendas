@@ -51,7 +51,7 @@
 	  
 	  {% for aguardando in object_list %}
 
-	  <tr{% if aguardando.estado.nome == "Desistência" %} class="orange lighten-3"{% endif %}>
+	  <tr{% if aguardando.estado.nome == "Desistência" %} class="orange lighten-3"{% elif aguardando.estado.nome == "Reserva" %} class="teal lighten-3"{% endif %}>
 		<td>
 		  <a href="/admin/aguardando/aguardando/{{ aguardando.id }}/change/" target="_blank" class="btn purple darken-4"><i class="large material-icons">edit</i></a>
 		</td>

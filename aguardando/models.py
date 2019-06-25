@@ -47,13 +47,13 @@ class Aguardando(models.Model):
 
         
     def __str__(self):
-        return "{} qtde:{} sep:{} {} {} <{}> {}".format(
+        return "[{}] {} qtde:{} sep:{} {} {} {}".format(
+            self.container,
             self.produto.code,
             self.qtde,
             self.ja_separado,
             ' '.join(self.cliente.business_name.split()[:3]).title(),
             self.estado,
-            self.container,
             self.data_hora)
         
         
@@ -70,4 +70,4 @@ class Chegando(models.Model):
 
         
     def __str__(self):
-        return "{} {} {}".format(self.produto.code, self.qtde, self.container)
+        return "{} {} {}".format(self.container, self.produto.code, self.qtde)

@@ -11,96 +11,96 @@
 <br><br>
 
 <a href="/admin/aguardando/aguardando/add/" target="_blank" class="btn green darken-4">
-  <i class="material-icons left">add</i>New Aguardando
+    <i class="material-icons left">add</i>New Aguardando
 </a>
 
 <div class="row">
-  <div class="col s12">
+    <div class="col s12">
 	<table>
-	  <tr>
+	    <tr>
 		<th>
-		  Edit
+		    Edit
 		</th>
-			
+		
 		<th>
-		  Produto
+		    Produto
 		</th>
 		
 		<th class="align-right">
-		  Qtde
+		    Qtde
 		</th>
 		
 		<th class="align-right">
-		  Já_sep.
+		    Já_sep.
 		</th>
 		
 		<th class="align-right">
-		  Sobram
+		    Sobram
 		</th>
 		
 		<th>
-		  Cliente
+		    Cliente
 		</th>
 		
 		<th>
-		  Estado
+		    Estado
 		</th>
 
 		<th>
-		  Container
+		    Container
 		</th>
 		
 		<th>
-		  Obs.
+		    Obs.
 		</th>
-	  </tr>
-	  
-	  {% for aguardando in object_list %}
+	    </tr>
+	    
+	    {% for aguardando in object_list %}
 
-	  <tr{% if aguardando.estado.nome == "Desistência" %} class="orange lighten-3"{% elif aguardando.estado.nome == "Reserva" %} class="teal lighten-3"{% endif %}>
+	    <tr{% if aguardando.estado.nome == "Desistência" %} class="orange lighten-3"{% elif aguardando.estado.nome == "Reserva" %} class="teal lighten-3"{% elif aguardando.estado.nome == "Desistência do Container" %} class="red lighten-3"{% endif %}>
 		<td>
-		  <a href="/admin/aguardando/aguardando/{{ aguardando.id }}/change/" target="_blank" class="btn purple darken-4"><i class="large material-icons">edit</i></a>
+		    <a href="/admin/aguardando/aguardando/{{ aguardando.id }}/change/" target="_blank" class="btn purple darken-4"><i class="large material-icons">edit</i></a>
 		</td>
 
 		<td>
-		  <b>{{ aguardando.produto.code }}</b>
-		  {{ aguardando.produto.name|title }}
+		    <b>{{ aguardando.produto.code }}</b>
+		    {{ aguardando.produto.name|title }}
 		</td>
 		
 		<td class="align-right">
-		  {{ aguardando.qtde }}
+		    {{ aguardando.qtde }}
 		</td>
 
 	  	<td class="align-right">
-		  {{ aguardando.ja_separado }}
+		    {{ aguardando.ja_separado }}
 		</td>
 
 	  	<td class="align-right">
-		  {% if aguardando.estado.nome == "Container" %}
-		  ({{ aguardando.sobram }})
-		  {% endif %}
+		    {% if aguardando.estado.nome == "Container" %}
+		    ({{ aguardando.sobram }})
+		    {% endif %}
 		</td>
 
 	  	<td>
-		  {{ aguardando.cliente.code }}
-		  {{ aguardando.cliente.business_name|title }}
-		  ({{ aguardando.cliente.salesperson|title }})
+		    {{ aguardando.cliente.code }}
+		    {{ aguardando.cliente.business_name|title }}
+		    ({{ aguardando.cliente.salesperson|title }})
 		</td>
 
 	  	<td>
-		  {{ aguardando.estado|title }}
+		    {{ aguardando.estado|title }}
 		</td>
 
 	  	<td>
-		  {{ aguardando.container }}
+		    {{ aguardando.container }}
 		</td>
 
 	  	<td>
-		  {{ aguardando.obs }}
+		    {{ aguardando.obs }}
 		</td>
-	  </tr>
-	  
-	  {% endfor %}
+	    </tr>
+	    
+	    {% endfor %}
 	</table>
   </div>
 </div>
